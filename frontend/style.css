@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;600;800&display=swap');
+
+:root {
+    --bg-dark: #0a0b1e;
+    --bg-card: rgba(22, 27, 51, 0.7);
+    --primary: #00d2ff;
+    --safe: #00f5a0;
+    --danger: #ff4b2b;
+    --text: #e0e0e0;
+    --text-muted: #a0a0b0;
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 11, 30, 0.85); /* Dark overlay for readability */
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding: 40px 0;
+    z-index: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to right, var(--primary), var(--safe));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.badge {
+    background: rgba(0, 210, 255, 0.1);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Main Card */
+.main-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.input-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 15px;
+    color: var(--text);
+    font-size: 1rem;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 4px rgba(0, 210, 255, 0.1);
+}
+
+.analyze-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--primary), #00a8ff);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.analyze-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.2);
+}
+
+.analyze-btn:active {
+    transform: translateY(0);
+}
+
+.analyze-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Result Section */
+.result-section {
+    margin-top: 30px;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.result-card {
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.result-card.spam {
+    background: rgba(255, 75, 43, 0.1);
+    border-color: var(--danger);
+}
+
+.result-card.safe {
+    background: rgba(0, 245, 160, 0.1);
+    border-color: var(--safe);
+}
+
+.status-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.status-label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.confidence {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* History Section */
+.history-section {
+    margin-top: 40px;
+}
+
+.history-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.history-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    position: relative; /* Added for absolute delete button */
+}
+
+.history-item:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.delete-btn {
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(255, 75, 43, 0.1);
+    color: var(--danger);
+    border: 1px solid rgba(255, 75, 43, 0.3);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 10px;
+}
+
+.history-item:hover .delete-btn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.delete-btn:hover {
+    background: var(--danger);
+    color: white;
+}
+
+.history-text {
+    flex: 1;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+}
+
+.history-tag {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.tag-spam { background: rgba(255, 75, 43, 0.2); color: var(--danger); }
+.tag-safe { background: rgba(0, 245, 160, 0.2); color: var(--safe); }
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

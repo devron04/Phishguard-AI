@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Phishing Detector | Secure Your Inbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">AI-Powered Security</div>
+            <h1>PhishGuard AI</h1>
+            <p>Advanced machine learning to detect suspicious messages and phishing attempts.</p>
+        </header>
+
+        <main class="main-card">
+            <div class="input-group">
+                <label for="email-content">Paste your email or message content below</label>
+                <textarea id="email-content" placeholder="e.g., Congratulations! You have won a 1000$ Walmart gift card. Click here to claim..."></textarea>
+            </div>
+
+            <button id="analyze-btn" class="analyze-btn">
+                <span class="btn-text">Analyze Content</span>
+                <div class="loader" id="loader"></div>
+            </button>
+
+            <div id="result-section" class="result-section">
+                <!-- Dynamic Content -->
+            </div>
+        </main>
+
+        <section class="history-section">
+            <h2 class="history-title">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
+                Recent Checks
+            </h2>
+            <div id="history-list" class="history-list">
+                <p style="color: var(--text-muted); font-size: 0.9rem;">No recent checks found.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
