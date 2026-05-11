@@ -1,67 +1,121 @@
-# 🛡️ PhishGuard AI: AI-Based Phishing Detection System
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=30&pause=1000&color=00F7FF&center=true&vCenter=true&width=1000&lines=🛡️+PhishGuard+AI;AI-Based+Phishing+Detection+System;Real-Time+Spam+%26+Phishing+Protection;FastAPI+%7C+Machine+Learning+%7C+Cybersecurity" />
+</p>
 
-A high-fidelity, real-time phishing and spam detection system powered by Machine Learning. This project features a **FastAPI** backend and a premium **Glassmorphism** web dashboard.
+<h1 align="center">🛡️ PhishGuard AI</h1>
+
+<p align="center">
+  <b>AI-Powered Real-Time Phishing & Spam Detection System</b>
+</p>
 
 ---
 
 ## 🚀 Features
-- **AI Core**: Uses TF-IDF Vectorization and Random Forest classification for high-accuracy detection.
-- **Deep Phrase Analysis**: Trained on modern phishing patterns to catch sophisticated "bank account" and "investment" scams.
-- **Modern UI**: A sleek, cybersecurity-inspired dashboard with smooth animations and hover effects.
-- **Session History**: Track and manage your recent checks with an integrated deletion feature.
+
+- ✅ AI-powered phishing and spam detection
+- ✅ TF-IDF + Random Forest Machine Learning model
+- ✅ Detects modern phishing & investment scams
+- ✅ FastAPI backend for real-time predictions
+- ✅ Premium Glassmorphism cybersecurity UI
+- ✅ Session history with delete functionality
+- ✅ Responsive modern dashboard
+
+---
 
 ## 📁 Project Structure
+
 ```text
 /ai phissing detector
 ├── backend/
-│   ├── main.py             # FastAPI Server
-│   ├── train_model.py       # ML Training Script
-│   ├── phishing_model.pkl   # Trained Model Pipeline
-│   └── requirements.txt    # Backend Dependencies
+│   ├── main.py
+│   ├── train_model.py
+│   ├── phishing_model.pkl
+│   └── requirements.txt
+│
 └── frontend/
-    ├── index.html          # Web Interface
-    ├── style.css           # UI Styling
-    ├── script.js           # Frontend Logic
-    └── background.png      # Branding Asset
+    ├── index.html
+    ├── style.css
+    ├── script.js
+    └── background.png
 ```
+
+---
 
 ## 🛠️ Installation & Setup
 
-### 1. Prerequisites
-- Python 3.8+
-- pip
+### 1️⃣ Clone Repository
 
-### 2. Backend Setup
-1. Navigate to the backend folder:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. (Optional) Retrain the model:
-   ```bash
-   python train_model.py
-   ```
-4. Start the server:
-   ```bash
-   python main.py
-   ```
+```bash
+git clone https://github.com/your-username/phishguard-ai.git
+cd phishguard-ai
+```
 
-### 3. Frontend Setup
-Simply open `frontend/index.html` in any modern web browser.
+### 2️⃣ Backend Setup
+
+```bash
+cd backend
+pip install -r requirements.txt
+```
+
+### 3️⃣ Train Model (Optional)
+
+```bash
+python train_model.py
+```
+
+### 4️⃣ Run Server
+
+```bash
+python main.py
+```
+
+---
+
+## 🌐 Frontend Setup
+
+Open:
+
+```text
+frontend/index.html
+```
+
+in any modern browser.
 
 ---
 
 ## 🧠 Model Information
-- **Dataset**: Built using the UCI SMS Spam Collection supplemented with modern email phishing data.
-- **Architecture**: Scikit-learn Pipeline with `RandomForestClassifier`.
-- **Accuracy**: ~98.9% on test data.
-- 
+
+| Feature | Details |
+|---|---|
+| Algorithm | Random Forest Classifier |
+| Vectorization | TF-IDF |
+| Framework | Scikit-learn |
+| Backend | FastAPI |
+| Accuracy | ~98.9% |
+
+---
+
 ## 🔒 Security Note
-This project is designed for educational and research purposes only.  
-Do not use it as the sole protection layer for sensitive or production environments.
+
+This project is intended for educational and research purposes only.  
+Do not rely on it as the only security layer in production environments.
+
+---
 
 ## 🤝 Contribution
-Designed as a professional-grade college project/submission. Pull requests and feedback are welcome!
+
+Pull requests, ideas, and feedback are welcome.
+
+If you like this project ⭐ the repository.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+<p align="center">
+  Made with ❤️ for Cybersecurity & AI
+</p>
