@@ -58,6 +58,10 @@ Simply open `frontend/index.html` in any modern web browser.
 - **Dataset**: Built using the UCI SMS Spam Collection supplemented with modern email phishing data.
 - **Architecture**: Scikit-learn Pipeline with `RandomForestClassifier`.
 - **Accuracy**: ~98.9% on test data.
+- 
+## 🔒 Security Note
+This project is designed for educational and research purposes only.  
+Do not use it as the sole protection layer for sensitive or production environments.
 
 ## 🤝 Contribution
 Designed as a professional-grade college project/submission. Pull requests and feedback are welcome!
